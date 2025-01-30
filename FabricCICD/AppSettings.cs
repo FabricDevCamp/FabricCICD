@@ -9,21 +9,21 @@ public class AppSettings {
   public static AppAuthenticationMode AuthenticationMode = AppAuthenticationMode.UserAuthWithAzurePowershell;
 
   // TODO: add Capacity Id for Fabric-enabled Premium capacity
-  public const string FabricCapacityId = "11111111-1111-1111-1111-111111111111";
+  public const string FabricCapacityId = "00000000-0000-0000-0000-000000000000";
 
 
   // Public client application created in Entra Id Service for user auth
-  public const string UserAuthClientId = "22222222-2222-2222-2222-222222222222";
+  public const string UserAuthClientId = "00000000-0000-0000-0000-000000000000";
   public const string UserAuthRedirectUri = "http://localhost";
 
   // Condifential client application created in Entra Id Service for service principal auth
-  public const string ServicePrincipalAuthTenantId = "33333333-3333-3333-3333-333333333333";
-  public const string ServicePrincipalAuthClientId = "44444444-4444-4444-4444-444444444444";
+  public const string ServicePrincipalAuthTenantId = "00000000-0000-0000-0000-000000000000";
+  public const string ServicePrincipalAuthClientId = "00000000-0000-0000-0000-000000000000";
   public const string ServicePrincipalAuthClientSecret = "YOUR_CLIENT_SECRET";
-  public const string ServicePrincipalObjectId = "55555555-5555-5555-5555-555555555555";
+  public const string ServicePrincipalObjectId = "00000000-0000-0000-0000-000000000000";
 
   // Add Entra object Id for user account of user running demo
-  public const string AdminUser1Id = "66666666-6666-6666-6666-666666666666";
+  public const string AdminUser1Id = "00000000-0000-0000-0000-000000000000";
 
   // update this URL with the URL to your Azure Dev Ops location
   public const string AzureDevOpsOrganizationName = "{YOUR_AZURE_DEVOPS_ORGANIZATION_NAME}";
