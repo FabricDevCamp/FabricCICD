@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "Create Lakehouse Tables"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "35c6f5e5-def9-9fd0-47b1-9fd43d6eb397"
+  }
+}

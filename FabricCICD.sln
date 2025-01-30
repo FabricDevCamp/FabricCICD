@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FabricCICD", "FabricCICD\FabricCICD.csproj", "{5A0400E2-A7A6-4565-B2F8-1D2EB3D72864}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A0400E2-A7A6-4565-B2F8-1D2EB3D72864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A0400E2-A7A6-4565-B2F8-1D2EB3D72864}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A0400E2-A7A6-4565-B2F8-1D2EB3D72864}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A0400E2-A7A6-4565-B2F8-1D2EB3D72864}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D0E81419-0529-41DF-A84F-E38D7FB36549}
+	EndGlobalSection
+EndGlobal

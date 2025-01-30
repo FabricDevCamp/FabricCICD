@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Product Sales DirectLake"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "9276278e-1f02-a94f-4599-592641a69856"
+  }
+}
