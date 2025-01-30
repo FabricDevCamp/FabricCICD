@@ -456,16 +456,14 @@ public class DeploymentManager {
         string sqlEndPointServer = datasource.ConnectionDetails.Server;
         string sqlEndPointDatabase = datasource.ConnectionDetails.Database;
 
-        AppLogger.LogSubstep($"Creating SQL connection for semantic model");
-        var sqlConnection = FabricRestApi.CreateSqlConnectionWithServicePrincipal(sqlEndPointServer, sqlEndPointDatabase);
+        // you cannot create the connection until you configure a service principal in AppSettings.cs
+        if (AppSettings.ServicePrincipalObjectId != "00000000-0000-0000-0000-000000000000") {
+          AppLogger.LogSubstep($"Creating SQL connection for semantic model");
+          var sqlConnection = FabricRestApi.CreateSqlConnectionWithServicePrincipal(sqlEndPointServer, sqlEndPointDatabase);
+          AppLogger.LogSubstep($"Binding connection to semantic model");
+          PowerBiRestApi.BindSemanticModelToConnection(WorkspaceId, SemanticModelId, sqlConnection.Id);
+        }
 
-        AppLogger.LogSubstep($"Binding connection to semantic model");
-        PowerBiRestApi.BindSemanticModelToConnection(WorkspaceId, SemanticModelId, sqlConnection.Id);
-
-        Thread.Sleep(5000);
-
-        AppLogger.LogSubstep($"Refreshing semantic model");
-        PowerBiRestApi.RefreshDataset(WorkspaceId, SemanticModelId);
       }
 
       if (datasource.DatasourceType == "Web") {
