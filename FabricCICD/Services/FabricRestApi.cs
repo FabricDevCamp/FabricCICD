@@ -63,13 +63,17 @@ public class FabricRestApi {
       AssignWorkspaceToCapacity(workspace.Id, capacityId);
     }
 
-    if (AppSettings.AuthenticationMode == AppAuthenticationMode.ServicePrincipalAuth) {
-      Guid AdminUserId = new Guid(AppSettings.AdminUser1Id);
+    if (AppSettings.AuthenticationMode == AppAuthenticationMode.ServicePrincipalAuth &&
+       (AppSettings.AdminUserId != "00000000-0000-0000-0000-000000000000")) {
+      Guid AdminUserId = new Guid(AppSettings.AdminUserId);
       FabricRestApi.AddUserAsWorkspaceMember(workspace.Id, AdminUserId, WorkspaceRole.Admin);
     }
     else {
-      Guid ServicePrincipalObjectId = new Guid(AppSettings.ServicePrincipalObjectId);
-      FabricRestApi.AddServicePrincipalAsWorkspaceMember(workspace.Id, ServicePrincipalObjectId, WorkspaceRole.Admin);
+      if (AppSettings.ServicePrincipalObjectId != "00000000-0000-0000-0000-000000000000") {
+        Guid ServicePrincipalObjectId = new Guid(AppSettings.ServicePrincipalObjectId);
+        FabricRestApi.AddServicePrincipalAsWorkspaceMember(workspace.Id, ServicePrincipalObjectId, WorkspaceRole.Admin);
+      }
+
     }
 
     return workspace;
@@ -170,29 +174,18 @@ public class FabricRestApi {
 
   public static Connection CreateConnection(CreateConnectionRequest CreateConnectionRequest, bool ReuseExistingConnection = false) {
 
-    //var connections = GetConnections();
-
-    //foreach (var existingConnection in connections) {
-    //  if (!string.IsNullOrEmpty(existingConnection.DisplayName) && existingConnection.DisplayName == CreateConnectionRequest.DisplayName) {
-    //    if (ReuseExistingConnection) {
-    //      return existingConnection;
-    //    }
-    //    else {
-    //      DeleteConnection(existingConnection.Id);
-    //    }
-
-    //  }
-    //}
-
     var connection = fabricApiClient.Core.Connections.CreateConnection(CreateConnectionRequest).Value;
 
-    if (AppSettings.AuthenticationMode == AppAuthenticationMode.ServicePrincipalAuth) {
-      Guid AdminUserId = new Guid(AppSettings.AdminUser1Id);
+    if ((AppSettings.AuthenticationMode == AppAuthenticationMode.ServicePrincipalAuth) &&
+        (AppSettings.AdminUserId != "00000000-0000-0000-0000-000000000000")) {
+      Guid AdminUserId = new Guid(AppSettings.AdminUserId);
       FabricRestApi.AddConnectionRoleAssignmentForUser(connection.Id, AdminUserId, ConnectionRole.Owner);
     }
     else {
-      Guid ServicePrincipalObjectId = new Guid(AppSettings.ServicePrincipalObjectId);
-      FabricRestApi.AddConnectionRoleAssignmentForServicePrincipal(connection.Id, ServicePrincipalObjectId, ConnectionRole.Owner);
+      if (AppSettings.ServicePrincipalObjectId != "00000000-0000-0000-0000-000000000000") {
+        Guid ServicePrincipalObjectId = new Guid(AppSettings.ServicePrincipalObjectId);
+        FabricRestApi.AddConnectionRoleAssignmentForServicePrincipal(connection.Id, ServicePrincipalObjectId, ConnectionRole.Owner);
+      }
     }
 
     return connection;

@@ -23,7 +23,7 @@ public class AppSettings {
   public const string ServicePrincipalObjectId = "00000000-0000-0000-0000-000000000000";
 
   // Add Entra object Id for user account of user running demo
-  public const string AdminUser1Id = "00000000-0000-0000-0000-000000000000";
+  public const string AdminUserId = "00000000-0000-0000-0000-000000000000";
 
   // update this URL with the URL to your Azure Dev Ops location
   public const string AzureDevOpsOrganizationName = "{YOUR_AZURE_DEVOPS_ORGANIZATION_NAME}";
