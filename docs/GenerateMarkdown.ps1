@@ -1,0 +1,1 @@
+pandoc -s --extract-media ./images/GettingStarted "GettingStarted.docx" -t gfm -o "GettingStarted.md"
