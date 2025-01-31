@@ -218,7 +218,7 @@ principal.
 <img src="./images/GettingStarted/media/image21.png" style="width:80%" />
 
 OK, you’re almost done. There is one more step which is to set
-the **AdminUserId **value in **AppSettings.cs**. This configuration
+the **AdminUserId** value in **AppSettings.cs**. This configuration
 value is important when you start running flows as a service principal.
 
 Here is the issue that is addressed with the **AdminUserId**
