@@ -79,7 +79,7 @@ code behind this function will not work correctly until you have
 configured **AppSettings.cs** with the name of the Azure DevOps
 organization you are using for testing.
 
-<img src="./images/GettingStarted/media/image8.png" style="width:60%" />
+<img src="./images/GettingStarted/media/image8.png" style="width:57%" />
 
 **AppSettings.cs** contains two constants for Azure DevOps shown below.
 
