@@ -151,14 +151,14 @@ Entra Id portal, you should configure the **Redirect URI** as **Public
 client/native** and set the URI value to **http://localhost** as shown
 in the following screenshot.
 
-<img src="./images/GettingStarted/media/image14.png" style="width:80%" />
+<img src="./images/GettingStarted/media/image14.png" style="width:70%" />
 
 After clicking **Register** to create the new Entra Id application, you
 should be able to copy the application’s client Id to the clipboard so
 you can paste it into **AppSettings.cs** as shown in the following
 screenshot.
 
-<img src="./images/GettingStarted/media/image15.png" style="width:80%" />
+<img src="./images/GettingStarted/media/image15.png" style="width:70%" />
 
 After you have created the Entra Id application for user authentication,
 you need to make two changes to **AppSettings.cs**. First you need paste
@@ -167,7 +167,7 @@ constant named **UserAuthClientId** as shown in the following
 screenshot. Second, you must update the value of the constant named
 **AuthenticationMode** to **UserAuth**.
 
-<img src="./images/GettingStarted/media/image16.png" style="width:80%" />
+<img src="./images/GettingStarted/media/image16.png" style="width:70%" />
 
 When you start the application for the first time after configuring
 **UserAuth** mode, you will be prompted by Entra Id to sign in. Once you
