@@ -105,9 +105,9 @@ following to this link.
 
 - **<https://dev.azure.com/>**  
 
-Getting the Azure DevOps working is important for the later demo
+Getting access to an Azure DevOps organization is important for the later demo
 workflows to work correctly. That’s because these demo workflows pull
-item definition files directly from a GIT repository.
+item definition files directly from a GIT repository in Azure DevOps.
 
 Note that Fabric supports using repositories for GIT integration using
 either Azure DevOps or GitHub. However, this project currently only has
