@@ -219,9 +219,9 @@ principal.
 
 OK, you’re almost done. There is one more step which is to set
 the **AdminUserId** value in **AppSettings.cs**. This configuration
-value is important when you start running flows as a service principal.
+value is important when you start running the demo workflows as a service principal.
 
-Here is the issue that is addressed with the **AdminUserId**
+Let's take a step back and explain the issue that is addressed with the **AdminUserId**
 configuration value. If you create a workspace as a service principal,
 that service principal will be the only identity that can access that
 workspace. That means you will not be able to inspect that workspace in
