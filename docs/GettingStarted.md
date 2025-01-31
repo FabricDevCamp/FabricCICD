@@ -79,17 +79,17 @@ code behind this function will not work correctly until you have
 configured **AppSettings.cs** with the name of the Azure DevOps
 organization you are using for testing.
 
-<img src="./images/GettingStarted/media/image8.png" style="width:80%" />
+<img src="./images/GettingStarted/media/image8.png" style="width:70%" />
 
 **AppSettings.cs** contains two constants for Azure DevOps shown below.
 
-<img src="./images/GettingStarted/media/image9.png" style="width:80%" />
+<img src="./images/GettingStarted/media/image9.png" style="width:90%" />
 
 You need to add the name of an Azure Dev organization. For example, my
 organization is named **FabricDevCamp,** so I have updated my settings
 to look like this.  
 
-<img src="./images/GettingStarted/media/image10.png" style="width:80%" />
+<img src="./images/GettingStarted/media/image10.png" style="width:90%" />
 
 You can see the **FabricCICD** project has a class
 named **AdoProjectManager** which uses the Azure REST API to interact
@@ -97,7 +97,7 @@ with Azure DevOps. I am planning to add another class with the
 equivalent code to interact with GitHub, but I am not sure when I will
 be able to write and test this code.
 
-<img src="./images/GettingStarted/media/image11.png" style="width:60%" />
+<img src="./images/GettingStarted/media/image11.png" style="width:75%" />
 
 If you don’t already have access to an Azure DevOps organization, you
 can likely set it up quickly without having to purchase anything. Once
