@@ -1,1 +1,0 @@
-pandoc -s --extract-media ./images/FabricCICD "FabricCICD.docx" -t gfm -o "FabricCICD.md"
