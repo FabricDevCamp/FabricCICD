@@ -32,7 +32,7 @@ workspaces and capacities in the console window as shown in the
 following screenshot. The one thing I want to call out is that it lists
 the capacities that your user account has permissions to access.
 
-<img src="./images/GettingStarted/media/image4.png" style="width:40%" />
+<img src="./images/GettingStarted/media/image4.png" style="width:70%" />
 
 Here is where you need to determine which capacity to configure for use
 with the application. You need to select a Fabric-enabled capacity and
