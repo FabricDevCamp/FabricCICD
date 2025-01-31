@@ -63,8 +63,9 @@ style="width:5.9557in;height:1.26219in"
 alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 Now you are ready to start running demo code from the application using
-your user account. This will allow you to test out the demo flows when
-authenticating as a user. 
+your user account. This will allow you to test out the demo CI/CD
+workflows when authenticating as a user with your Entra Id user
+account. 
 
 Open the source file named **Program.cs.** You should be able to see the
 code is initially set up to call a function named
@@ -87,9 +88,10 @@ workspace items. It is simply a matter of uncommenting the functions you
 want to test out.
 
 If you want to test out this project support for GIT integration, you
-can uncomment the function named **ConnectWorkspaceToGit**. However,
-this will not work correctly until you have configured
-**AppSettings.cs** with the name of an Azure DevOps organization.
+can uncomment the function named **ConnectWorkspaceToGit**. However, the
+code behind this function will not work correctly until you have
+configured **AppSettings.cs** with the name of the Azure DevOps
+organization you are using for testing.
 
 <img src="./images/GettingStarted/media/image8.png"
 style="width:5.10495in;height:0.76338in"
@@ -154,51 +156,77 @@ is **UserAuthWithAzurePowershell**.
 style="width:7.5in;height:1.34097in"
 alt="A computer screen shot of a computer code AI-generated content may be incorrect." />
 
-This default authentication mode setting make things just work
-out-of-the-box. This is the authentication mode that does not require
-you to create an Entra Id application. Note that you can configure three
-different options for the authentication mode as shown in the following
-screenshot. The two other available modes will require you to create
+This default authentication mode setting has been designed to get
+started quickly because it just work out-of-the-box. This authentication
+mode does not require you to create an Entra Id application. Note that
+you can configure three different options for the authentication mode as
+shown in the following screenshot. The two other available modes of
+**UserAuth** and **ServicePrincipalAuth** will require you to create
 Entra Id applications in order to use them.
 
 <img src="./images/GettingStarted/media/image13.png"
 style="width:4.28333in;height:0.925in"
 alt="A computer screen shot of a black square AI-generated content may be incorrect." />
 
-If you want to create a custom application for user authentication, you
-must create a Entra Id application in the same tenant where you are
-creating workspaces. Configure the **Redirect URI** as **Public
+### Configuring User Authentication with a Custom Entra Id Application
+
+If you want to use **UserAuth** mode, you must create a Entra Id
+application in the same M365 tenant where you are creating and testing
+Fabric workspaces. When you create a new Entra Id application in the
+Entra Id portal, you should configure the **Redirect URI** as **Public
 client/native** and set the URI value to **http://localhost** as shown
 in the following screenshot.
 
 <img src="./images/GettingStarted/media/image14.png"
-style="width:4.54731in;height:3.38797in"
-alt="A screenshot of a computer AI-generated content may be incorrect." />
+style="width:4.53892in;height:3.2977in" />
 
-Once you have created the Entr Id application for user authentication,
-you need to update **AuthenticationMode** to **UserAuth** and
-the **UserAuthClientId**id value with the client Id of the Entra Id. 
+After clicking **Register** to create the new Entra Id application, you
+should be able to copy the application’s client Id to the clipboard so
+you can paste it into **AppSettings.cs** as shown in the following
+screenshot.
 
 <img src="./images/GettingStarted/media/image15.png"
-style="width:6.3in;height:1.09167in"
-alt="A close-up of a computer code AI-generated content may be incorrect." />
+style="width:4.12382in;height:1.55456in" />
 
-If you want to run the application as a service principal, you must
-create an Entra Id application and configure it with a client secret.
-The service principal must also be configured within the current M365
-tenant, so it has permissions to call the Fabric REST APIs. This
-includes configuring the service principal in the Fabric Admin portal
-with the **Service principals can use Fabric APIs** permissions. If the
-service principal is not configured properly, any call the service
-principal makes to a Fabric REST API endpoint will fail with a 401
-error.
+After you have created the Entra Id application for user authentication,
+you need to make two changes to **AppSettings.cs**. First you need paste
+the client Id of the Entra Id application into the value for the
+constant named **UserAuthClientId** as shown in the following
+screenshot. Second, you must update the value of the constant named
+**AuthenticationMode** to **UserAuth**.
+
+<img src="./images/GettingStarted/media/image16.png"
+style="width:5.58294in;height:0.95894in" />
+
+When you start the application for the first time after configuring
+**UserAuth** mode, you will be prompted by Entra Id to sign in. Once you
+have signed in, Entra Id will then prompt you with the **Permissions
+request** consent dialog asking you to consent to the delegated
+permissions that this application has requested. You should click
+**Accept** to continue.
+
+<img src="./images/GettingStarted/media/image17.png"
+style="width:2.59121in;height:5.96661in"
+alt="A screenshot of a checklist AI-generated content may be incorrect." />
+
+### Configuring Service Principal Authentication with a Custom Entra Id Application
+
+If you want to run the **FabricCICD** application as a service
+principal, you must create an Entra Id application that is configured
+with a client secret. The service principal must also be configured
+within the current M365 tenant, so it has permissions to call the Fabric
+REST APIs. This includes configuring the service principal in the Fabric
+Admin portal with the **Service principals can use Fabric APIs**
+permissions. If the service principal is not configured properly, any
+call the service principal makes to a Fabric REST API endpoint will fail
+with a 401 error.
 
 Once you have created the Entra Id application, you need to copy its
 tenant id and client Id as well as the client secret so you can add them
 to **AppSettings.cs**. Once you get the configuration information for
 the service principal, you must add its into **AppSettings.cs**.
 
-<img src="./images/GettingStarted/media/image16.png"
+<img src="./images/GettingStarted/media/image18.png"
 style="width:5.93333in;height:1.575in"
 alt="A computer screen shot of a computer code AI-generated content may be incorrect." />
 
@@ -209,7 +237,7 @@ service principal as a workspace member. The easiest way I know to get
 this value is to go to the Entra Id application **Overview** page and
 click the **Managed application in local directly** link.
 
-<img src="./images/GettingStarted/media/image17.png"
+<img src="./images/GettingStarted/media/image19.png"
 style="width:7.04167in;height:2.31667in"
 alt="A screenshot of a computer AI-generated content may be incorrect." />
 
@@ -217,14 +245,14 @@ When you click the **Managed application in local directly** linkyou
 will navigate to page from which you can copy the **Object ID** value
 which is the service principal object Id. 
 
-<img src="./images/GettingStarted/media/image18.png"
+<img src="./images/GettingStarted/media/image20.png"
 style="width:4.37539in;height:2.33595in"
 alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 Now you have 4 settings which completes configuring the service
 principal.
 
-<img src="./images/GettingStarted/media/image19.png"
+<img src="./images/GettingStarted/media/image21.png"
 style="width:6.69969in;height:0.77791in" />
 
 OK, you’re almost done. There is one more step which is to set
@@ -246,7 +274,7 @@ If you look at the bottom of the following screenshot, you will see a
 constant named **AdminUserId**. You need to configure this constant with
 the object id associated with your Entra Id user account.
 
-<img src="./images/GettingStarted/media/image20.png"
+<img src="./images/GettingStarted/media/image22.png"
 style="width:6.91667in;height:2.725in"
 alt="A screenshot of a computer program AI-generated content may be incorrect." />
 
@@ -256,12 +284,12 @@ Next, click **Users** in the left nav. If you click on your user
 account, you should navigate to a page from which you can copy
 the **Object Id** associated with your user account.
 
-<img src="./images/GettingStarted/media/image21.png"
+<img src="./images/GettingStarted/media/image23.png"
 style="width:5.55149in;height:3.03914in"
 alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 Use that **Object ID** to update the **AdminUserId** constant
 in **AppSettings.cs**.
 
-<img src="./images/GettingStarted/media/image19.png"
+<img src="./images/GettingStarted/media/image21.png"
 style="width:6.69969in;height:0.77791in" />
