@@ -15,7 +15,7 @@ When you open the project, start by examining **AppSettings.cs**. This
 is a settings file with configuration data you need to modify for your
 Fabric environment.
 
-<img src="./images/GettingStarted/media/image2.png" style="width:90%" />
+<img src="./images/GettingStarted/media/image2.png" style="width:96%" />
 
 However, you don't need to modify **AppSettings.cs **before you run this
 application for the first time. When you start up and run the project
@@ -83,13 +83,13 @@ organization you are using for testing.
 
 **AppSettings.cs** contains two constants for Azure DevOps shown below.
 
-<img src="./images/GettingStarted/media/image9.png" style="width:90%" />
+<img src="./images/GettingStarted/media/image9.png" style="width:85%" />
 
 You need to add the name of an Azure Dev organization. For example, my
 organization is named **FabricDevCamp,** so I have updated my settings
 to look like this.  
 
-<img src="./images/GettingStarted/media/image10.png" style="width:90%" />
+<img src="./images/GettingStarted/media/image10.png" style="width:85%" />
 
 You can see the **FabricCICD** project has a class
 named **AdoProjectManager** which uses the Azure REST API to interact
