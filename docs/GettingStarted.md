@@ -148,7 +148,7 @@ If you want to use **UserAuth** mode, you must create a Entra Id
 application in the same M365 tenant where you are creating and testing
 Fabric workspaces. When you create a new Entra Id application in the
 Entra Id portal, you should configure the **Redirect URI** as **Public
-client/native** and set the URI value to **<span>http://localhost</span>** as shown
+client/native** and set the URI value to **http<span>://</span>localhost** as shown
 in the following screenshot.
 
 <img src="./images/GettingStarted/media/image14.png" style="width:70%" />
