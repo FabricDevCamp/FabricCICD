@@ -95,7 +95,7 @@ You can see the **FabricCICD** project has a class
 named **AdoProjectManager** which uses the Azure REST API to interact
 with Azure DevOps.
 
-<img src="./images/GettingStarted/media/image11.png" style="width:95%" />
+<img src="./images/GettingStarted/media/image11.png" style="width:99%" />
 
 If you don’t already have access to an Azure DevOps organization, you
 can set up support for this pretty quickly without having to purchase anything. Once
