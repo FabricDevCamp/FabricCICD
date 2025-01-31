@@ -61,7 +61,7 @@ Open the source file named **Program.cs.** You should be able to see the
 code is initially set up to call a function named
 **Setup_ViewWorkspacesAndCapacities** .  
 
-<img src="./images/GettingStarted/media/image6.png" style="width:60%" />
+<img src="./images/GettingStarted/media/image6.png" style="width:50%" />
 
 Now you can comment out the line that
 calls **Setup_ViewWorkspacesAndCapacities** and uncomment the next line
