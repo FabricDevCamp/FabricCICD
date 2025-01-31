@@ -1,1 +1,0 @@
-pandoc -s --extract-media ./images/AutomatingFabricSolutionDeployment "Automating Fabric Solution Deployment.docx" -t gfm -o "Automating Fabric Solution Deployment.md"
