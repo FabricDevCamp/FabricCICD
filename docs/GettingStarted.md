@@ -1,6 +1,6 @@
 # Getting Started
 
-This setup guide is designed to help you get up and running with the
+> This setup guide is designed to help you get up and running with the
 **FabricCICD** sample application.
 
 Once you download the **FabricCICD** project, you can open and test it
