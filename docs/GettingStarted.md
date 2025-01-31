@@ -9,9 +9,7 @@ version. While I haven't tested this with VS Code, you should be able to
 use instead of Visual Studio as long as you have the .NET/C# extensions
 installed.
 
-<img src="./images/GettingStarted/media/image1.png"
-style="width:1.96519in;height:2.13837in"
-alt="A screenshot of a computer AI-generated content may be incorrect." />
+<img src="./images/GettingStarted/media/image1.png" style="width:50%" />
 
 When you open the project, start by examining **AppSettings.cs**. This
 is a settings file with configuration data you need to modify for your
