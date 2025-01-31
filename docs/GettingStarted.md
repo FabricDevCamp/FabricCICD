@@ -109,7 +109,7 @@ Getting access to an Azure DevOps organization is important for the later demo
 workflows to work correctly. That’s because these demo workflows pull
 item definition files directly from a GIT repository in Azure DevOps.
 
-Note that Fabric supports using repositories for GIT integration using
+> Note that Fabric supports using repositories for GIT integration using
 either Azure DevOps or GitHub. However, this project currently only has
 support for Azure DevOps. There are plans add support for GitHub in a
 future update to this project.
