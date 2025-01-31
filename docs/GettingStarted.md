@@ -176,7 +176,7 @@ request** consent dialog asking you to consent to the delegated
 permissions that this application has requested. You should click
 **Accept** to continue.
 
-<img src="./images/GettingStarted/media/image17.png" style="width:40%" />
+<img src="./images/GettingStarted/media/image17.png" style="width:30%" />
 
 ### Configuring Service Principal Authentication with a Custom Entra Id Application
 
