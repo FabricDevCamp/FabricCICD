@@ -97,7 +97,7 @@ with Azure DevOps. I am planning to add another class with the
 equivalent code to interact with GitHub, but I am not sure when I will
 be able to write and test this code.
 
-<img src="./images/GettingStarted/media/image11.png" style="width:85%" />
+<img src="./images/GettingStarted/media/image11.png" style="width:95%" />
 
 If you don’t already have access to an Azure DevOps organization, you
 can likely set it up quickly without having to purchase anything. Once
