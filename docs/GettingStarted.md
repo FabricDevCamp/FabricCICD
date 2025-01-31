@@ -50,7 +50,7 @@ deployment using a service principal.
 Once you determine which capacity you want to use, copy its ID value
 into the **FabricCapcityId** constant value in **AppSettings.cs**.
 
-<img src="./images/GettingStarted/media/image5.png" style="width:40%" />
+<img src="./images/GettingStarted/media/image5.png" style="width:70%" />
 
 Now you are ready to start running demo code from the application using
 your user account. This will allow you to test out the demo CI/CD
@@ -61,13 +61,13 @@ Open the source file named **Program.cs.** You should be able to see the
 code is initially set up to call a function named
 **Setup_ViewWorkspacesAndCapacities** .  
 
-<img src="./images/GettingStarted/media/image6.png" style="width:40%" />
+<img src="./images/GettingStarted/media/image6.png" style="width:70%" />
 
 Now you can comment out the line that
 calls **Setup_ViewWorkspacesAndCapacities** and uncomment the next line
 to run demo **Demo01_DeploySolutionToWorkspace**.
 
-<img src="./images/GettingStarted/media/image7.png" style="width:40%" />
+<img src="./images/GettingStarted/media/image7.png" style="width:70%" />
 
 This will let you run tests and demo workflows to create workspaces and
 workspace items. It is simply a matter of uncommenting the functions you
