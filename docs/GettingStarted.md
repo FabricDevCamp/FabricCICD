@@ -195,7 +195,7 @@ tenant id and client Id as well as the client secret so you can add them
 to **AppSettings.cs**. Once you get the configuration information for
 the service principal, you must add its into **AppSettings.cs**.
 
-<img src="./images/GettingStarted/media/image18.png" style="width:90%" />
+<img src="./images/GettingStarted/media/image18.png" style="width:80%" />
 
 One part that is kind of tricking is getting
 the **ServicePrincipalObjectId **value for the service principal. You
