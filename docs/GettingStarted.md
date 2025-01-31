@@ -9,7 +9,7 @@ version. While I haven't tested this with VS Code, you should be able to
 use instead of Visual Studio as long as you have the .NET/C# extensions
 installed.
 
-<img src="./images/GettingStarted/media/image1.png" style="width:30%" />
+<img src="./images/GettingStarted/media/image1.png" style="width:25%" />
 
 When you open the project, start by examining **AppSettings.cs**. This
 is a settings file with configuration data you need to modify for your
@@ -23,7 +23,7 @@ for the first time, you will be prompted to login. Log in using the user
 account which has access and permissions in your Fabric development
 environment.
 
-<img src="./images/GettingStarted/media/image3.png" style="width:20%" />
+<img src="./images/GettingStarted/media/image3.png" style="width:25%" />
 
 Once you login, the application will execute two Fabric REST APIs to get
 information about the workspace and capacities to which the caller (i.e.
