@@ -249,4 +249,4 @@ the **Object Id** associated with your user account.
 Use that **Object ID** to update the **AdminUserId** constant
 in **AppSettings.cs**.
 
-<img src="./images/GettingStarted/media/image24.png" style="width:80%" />
+<img src="./images/GettingStarted/media/image24.png" style="width:70%" />
