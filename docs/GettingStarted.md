@@ -215,7 +215,7 @@ which is the service principal object Id. 
 Now you have 4 settings which completes configuring the service
 principal.
 
-<img src="./images/GettingStarted/media/image21.png" style="width:90%" />
+<img src="./images/GettingStarted/media/image21.png" style="width:80%" />
 
 OK, you’re almost done. There is one more step which is to set
 the **AdminUserId **value in **AppSettings.cs**. This configuration
@@ -249,4 +249,4 @@ the **Object Id** associated with your user account.
 Use that **Object ID** to update the **AdminUserId** constant
 in **AppSettings.cs**.
 
-<img src="./images/GettingStarted/media/image21.png" style="width:90%" />
+<img src="./images/GettingStarted/media/image24.png" style="width:90%" />
