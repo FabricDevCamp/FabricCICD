@@ -158,7 +158,7 @@ should be able to copy the application’s client Id to the clipboard so
 you can paste it into **AppSettings.cs** as shown in the following
 screenshot.
 
-<img src="./images/GettingStarted/media/image15.png" style="width:70%" />
+<img src="./images/GettingStarted/media/image15.png" style="width:62%" />
 
 After you have created the Entra Id application for user authentication,
 you need to make two changes to **AppSettings.cs**. First you need paste
