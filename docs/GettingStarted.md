@@ -195,7 +195,7 @@ tenant id and client Id as well as the client secret so you can add them
 to **AppSettings.cs**. Once you get the configuration information for
 the service principal, you must add its into **AppSettings.cs**.
 
-<img src="./images/GettingStarted/media/image18.png" style="width:40%" />
+<img src="./images/GettingStarted/media/image18.png" style="width:90%" />
 
 One part that is kind of tricking is getting
 the **ServicePrincipalObjectId **value for the service principal. You
@@ -204,18 +204,18 @@ service principal as a workspace member. The easiest way I know to get
 this value is to go to the Entra Id application **Overview** page and
 click the **Managed application in local directly** link.
 
-<img src="./images/GettingStarted/media/image19.png" style="width:40%" />
+<img src="./images/GettingStarted/media/image19.png" style="width:70%" />
 
 When you click the **Managed application in local directly** linkyou
 will navigate to page from which you can copy the **Object ID** value
 which is the service principal object Id. 
 
-<img src="./images/GettingStarted/media/image20.png" style="width:40%" />
+<img src="./images/GettingStarted/media/image20.png" style="width:50%" />
 
 Now you have 4 settings which completes configuring the service
 principal.
 
-<img src="./images/GettingStarted/media/image21.png" style="width:40%" />
+<img src="./images/GettingStarted/media/image21.png" style="width:90%" />
 
 OK, you’re almost done. There is one more step which is to set
 the **AdminUserId **value in **AppSettings.cs**. This configuration
@@ -236,7 +236,7 @@ If you look at the bottom of the following screenshot, you will see a
 constant named **AdminUserId**. You need to configure this constant with
 the object id associated with your Entra Id user account.
 
-<img src="./images/GettingStarted/media/image22.png" style="width:40%" />
+<img src="./images/GettingStarted/media/image22.png" style="width:90%" />
 
 There are several different ways you can get the Id for your Entra Id
 User account. The easiest way is to go to the Entra Id admin center.
@@ -244,9 +244,9 @@ Next, click **Users** in the left nav. If you click on your user
 account, you should navigate to a page from which you can copy
 the **Object Id** associated with your user account.
 
-<img src="./images/GettingStarted/media/image23.png" style="width:40%" />
+<img src="./images/GettingStarted/media/image23.png" style="width:60%" />
 
 Use that **Object ID** to update the **AdminUserId** constant
 in **AppSettings.cs**.
 
-<img src="./images/GettingStarted/media/image21.png" style="width:40%" />
+<img src="./images/GettingStarted/media/image21.png" style="width:90%" />
